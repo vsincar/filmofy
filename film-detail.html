@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmin Detayları</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="scripts/main.js"></script>
+</head>
+
+<body style="background-color: #5D0E41;" id="film-detail-page">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
+        <a class="navbar-brand" href="index.html">
+            <span class="logo"><span class="ilkharf">F</span><span class="kalanharf">ilmofy</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <img src="images/populer.svg" class="icon"> Popüler Filmler
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle custom-link" href="#" role="button" data-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="images/kategoriler.svg" class="icon"> Kategoriler
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Aile</a>
+                        <a class="dropdown-item" href="#">Aksiyon</a>
+                        <a class="dropdown-item" href="#">Animasyon</a>
+                        <a class="dropdown-item" href="#">Dram</a>
+                        <a class="dropdown-item" href="#">Fantastik</a>
+                        <a class="dropdown-item" href="#">Gizem</a>
+                        <a class="dropdown-item" href="#">Korku</a>
+                        <a class="dropdown-item" href="#">Macera</a>
+                        <a class="dropdown-item" href="#">Romantik</a>
+                        <a class="dropdown-item" href="#">Savaş</a>
+                        <a class="dropdown-item" href="#">Suç</a>
+                        <a class="dropdown-item" href="#">Tarih</a>
+                        <a class="dropdown-item" href="#">Biyografi</a>
+                        <a class="dropdown-item" href="#">Dini</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Tüm Kategoriler</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <img src="images/profilim.svg" class="icon"> Profilim
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <img src="images/kitapligim.svg" class="icon"> Kitaplığım
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Film ara" aria-label="Ara">
+                <button class="btn btn-light my-1 my-sm-0" type="submit">Ara</button>
+                <button class="btn btn-outline-light my-2 my-sm-0 ml-2">Giriş Yap</button>
+            </form>
+        </div>
+    </nav>
+    <!-- /Navbar -->
+
+    <!-- Film Detayları -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img id="film-image" src="" class="img-fluid rounded-lg">
+            </div>
+            <div class="col-md-8">
+                <h1 id="film-title"></h1>
+                <p id="film-description"></p>
+                <p><strong>IMDb Rating: </strong><span id="film-imdb"></span></p>
+            </div>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Yorumlar</h2>
+                <form id="comment-form" class="mb-4">
+                    <div class="form-group">
+                        <textarea id="comment-text" class="form-control" rows="3"
+                            placeholder="Yorumunuzu buraya yazın"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Yorum Yap</button>
+                </form>
+                <div id="comment-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /Film Detayları -->
+
+    <!-- Footer -->
+    <footer class="footer pt-4 rounded-top">
+        <div class="container">
+            <div class="row" style="background-color: #00224D;">
+                <div class="col-md-4">
+                    <h5>Filmofy hakkında</h5>
+                    <p>Bir TeknoGenç projesidir.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Emeği Geçenler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="vsincar.github.io/my-portfolio">Veysel Sincar</a></li>
+                        <li>Emirsah Erden</li>
+                        <li>Kübra Ağdaş</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim için:</h5>
+                    <p>Email: info@filmofy.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-3">
+                <span>© 2024 Filmofy. Tüm hakları saklıdır.</span>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Bootstrap JS ve ek scriptler -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- /Bootstrap JS ve ek scriptler -->
+</body>
+
+</html>

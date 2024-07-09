@@ -1,0 +1,25 @@
+.card-img-top {
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    color: white;
+    padding: 5px;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: visibility 0s, opacity 0.5s linear; /* Smooth transition */
+}
+
+.card:hover .card-title {
+    visibility: visible;
+    opacity: 1;
+}

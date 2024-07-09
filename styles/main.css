@@ -1,0 +1,204 @@
+/* Font Cagirma kodu burada biter */
+@font-face {
+    font-family: 'Galada';
+    src: url('/fonts/galada.ttf') format(truetype);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Font Cagirma kodu burada biter */
+
+.nav-bg {
+    background-color: #00224D;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.logo {
+    font-family: 'Galada', 'Times New Roman', Times, serif;
+    color: #FF204E;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.ilkharf {
+    font-family: 'Galada', 'Times New Roman', Times, serif;
+    color: #FF204E;
+    font-size: 1.8em;
+}
+
+.kalanharf {
+    font-family: 'Galada', 'Times New Roman', Times, serif;
+    color: #FF204E;
+    font-size: 1em;
+}
+
+.nav-link,
+.icon {
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover,
+.icon:hover {
+    opacity: 1;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+}
+
+.row {
+    background-color: #FFF;
+    display: flex;
+   justify-items: auto;
+}
+
+.film-card {
+    justify-self: flex-start;
+    position: relative;
+    margin: 5px 3px;
+    overflow: hidden;
+    cursor: pointer; /* Tıklanabilir olduğunu gösterir */
+}
+
+.film-card:hover .film-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    
+
+}
+
+.film-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 99%;
+    height: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Örneğin padding değeri eklendi */
+    box-sizing: border-box; /* Padding için kutu modelini sınırlı hale getir */
+}
+
+.film-overlay-content {
+    max-width: 93%; /* İçerik genişliğini ayarla */
+    max-height: 99%;
+    padding: 5px; /* İçerik için padding değeri eklendi */
+}
+
+
+.film-genres {
+    margin-top: 5px;
+}
+
+.badge {
+    margin-right: 5px;
+}
+
+.badge-primary {
+    cursor: pointer;
+    background-color: #007bff;
+}
+
+.film-description {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.film-card:hover .film-overlay {
+    opacity: 1;
+
+}
+
+
+.film-card img {
+    width: 260px;
+    height: 420px;
+}
+
+.film-title,
+.film-imdb,
+.film-heart {
+    position: absolute;
+    color: white;
+}
+
+.film-imdb {
+    user-select: none;
+}
+
+.film-title {
+    color: white;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    text-align: center;
+    width: 99%;
+    border-top: solid 1px #FFF;
+}
+
+.film-imdb {
+    top: 10px;
+    left: 10px;
+    background-color: #f5c518;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+.film-heart {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.4s ease, transform 0.2s ease;
+    color: white;
+}
+
+.film-heart:hover {
+    transform: scale(1.3);
+}
+
+.film-heart.liked {
+    color: red;
+}
+
+
+.film-heart.fas {
+    color: red; /* Yeni eklenen stil */
+}
+
+
+.footer {
+    background-color: #00224D;
+    color: #FFF;
+}
+
+.footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color:#FFF;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+}
