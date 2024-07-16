@@ -26,7 +26,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.html">
                         <img src="images/populer.svg" class="icon"> Popüler Filmler
                     </a>
@@ -37,26 +37,31 @@
                         <img src="images/kategoriler.svg" class="icon"> Kategoriler
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Aile</a>
-                        <a class="dropdown-item" href="#">Aksiyon</a>
-                        <a class="dropdown-item" href="#">Animasyon</a>
-                        <a class="dropdown-item" href="#">Dram</a>
-                        <a class="dropdown-item" href="#">Fantastik</a>
-                        <a class="dropdown-item" href="#">Gizem</a>
-                        <a class="dropdown-item" href="#">Korku</a>
-                        <a class="dropdown-item" href="#">Macera</a>
-                        <a class="dropdown-item" href="#">Romantik</a>
-                        <a class="dropdown-item" href="#">Savaş</a>
-                        <a class="dropdown-item" href="#">Suç</a>
-                        <a class="dropdown-item" href="#">Tarih</a>
-                        <a class="dropdown-item" href="#">Biyografi</a>
-                        <a class="dropdown-item" href="#">Dini</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Aile'); return false;">Aile</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Aksiyon'); return false;">Aksiyon</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="filterFilms('Animasyon'); return false;">Animasyon</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Dram'); return false;">Dram</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Gizem'); return false;">Gizem</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Korku'); return false;">Korku</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Macera'); return false;">Macera</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Romantik'); return false;">Romantik</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Savaş'); return false;">Savaş</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Suç'); return false;">Suç</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Tarih'); return false;">Tarih</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="filterFilms('Biyografi'); return false;">Biyografi</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="filterFilms('Bilim-Kurgu'); return false;">Bilim-Kurgu</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Dini'); return false;">Dini</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Tüm Kategoriler</a>
+                        <a class="dropdown-item" href="#" onclick="showAllFilms(); return false;">Tüm Kategoriler</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">
+                    <a href="profilim.html" class="nav-link">
                         <img src="images/profilim.svg" class="icon"> Profilim
                     </a>
                 </li>
@@ -69,12 +74,13 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Film ara" aria-label="Ara">
                 <button class="btn btn-light my-1 my-sm-0" type="submit">Ara</button>
-                <button class="btn btn-outline-light my-2 my-sm-0 ml-2">Giriş Yap</button>
+                <button class="btn btn-outline-light my-2 my-sm-0 ml-2" onclick="(function() {
+                    window.open('login.html', '_blank');
+                })(); return false;">Giriş Yap</button>
             </form>
         </div>
     </nav>
     <!-- /Navbar -->
-
     <!-- Film Detayları -->
     <div class="container mt-5">
         <div class="row">
