@@ -10,6 +10,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <style>
         .film-card {
             width: 80px;
@@ -45,100 +46,86 @@
             background: rgba(0, 0, 0, 0.9);
             display: block;
         }
-        /* .filmIsmi {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    padding: 5px;
-    box-sizing: border-box;
-    opacity: 0; 
-    transition: opacity 0.3s ease; } */
 
+        .filmIsmi {
+            display: none;
+            position: absolute;
+            border: 1px solid #000;
+            padding: 10px;
+            background-color: #FFF;
+            z-index: 10;
+        }
 
-.filmIsmi {
-    display:none;
-    position:absolute;
-    border:1px solid #000;
-    padding:10px;
-    background-color: #FFF;
-    z-index: 10;
-}
-.film-card:hover .filmIsmi {
-    opacity: 1; /* Show on hover */
-}
-
+        .film-card:hover .filmIsmi {
+            opacity: 1;
+            /* Show on hover */
+        }
     </style>
 </head>
 
 <body style="background-color: #5D0E41;">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
-        <a class="navbar-brand" href="index.html">
-            <span class="logo"><span class="ilkharf">F</span><span class="kalanharf">ilmofy</span></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
+    <a class="navbar-brand" href="index.html">
+        <span class="logo"><span class="ilkharf">F</span><span class="kalanharf">ilmofy</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <img src="images/populer.svg" class="icon"> Popüler Filmler
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle custom-link" href="#" role="button" data-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="images/kategoriler.svg" class="icon"> Kategoriler
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Aile</a>
-                        <a class="dropdown-item" href="#">Aksiyon</a>
-                        <a class="dropdown-item" href="#">Animasyon</a>
-                        <a class="dropdown-item" href="#">Dram</a>
-                        <a class="dropdown-item" href="#">Fantastik</a>
-                        <a class="dropdown-item" href="#">Gizem</a>
-                        <a class="dropdown-item" href="#">Korku</a>
-                        <a class="dropdown-item" href="#">Macera</a>
-                        <a class="dropdown-item" href="#">Romantik</a>
-                        <a class="dropdown-item" href="#">Savaş</a>
-                        <a class="dropdown-item" href="#">Suç</a>
-                        <a class="dropdown-item" href="#">Tarih</a>
-                        <a class="dropdown-item" href="#">Biyografi</a>
-                        <a class="dropdown-item" href="#">Dini</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Tüm Kategoriler</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="profilim.html">
-                        <img src="images/profilim.svg" class="icon"> Profilim
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <img src="images/kitapligim.svg" class="icon"> Kitaplığım
-                    </a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Film ara" aria-label="Ara">
-                <button class="btn btn-light my-1 my-sm-0" type="submit">Ara</button>
-                <button class="btn btn-outline-light my-2 my-sm-0 ml-2" onclick="(function() {
-                    window.open('login.html', '_blank'); // '_blank' yeni bir sekmede açılmasını sağlar
-                })()">Giriş Yap</button>
-            </form>
-        </div>
-    </nav>
-    <!-- /Navbar -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <img src="images/populer.svg" class="icon"> Popüler Filmler
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle custom-link" href="#" role="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="images/kategoriler.svg" class="icon"> Kategoriler
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Aile'); return false;">Aile</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Aksiyon'); return false;">Aksiyon</a>
+                    <a class="dropdown-item" href="#"
+                        onclick="filterFilms('Animasyon'); return false;">Animasyon</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Dram'); return false;">Dram</a>
+                    <a class="dropdown-item" href="#"
+                        onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Gizem'); return false;">Gizem</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Korku'); return false;">Korku</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Macera'); return false;">Macera</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Romantik'); return false;">Romantik</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Savaş'); return false;">Savaş</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Suç'); return false;">Suç</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Tarih'); return false;">Tarih</a>
+                    <a class="dropdown-item" href="#"
+                        onclick="filterFilms('Biyografi'); return false;">Biyografi</a>
+                    <a class="dropdown-item" href="#"
+                        onclick="filterFilms('Bilim-Kurgu'); return false;">Bilim-Kurgu</a>
+                    <a class="dropdown-item" href="#" onclick="filterFilms('Dini'); return false;">Dini</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" onclick="showAllFilms(); return false;">Tüm Kategoriler</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="profilim.html" class="nav-link">
+                    <img src="images/profilim.svg" class="icon"> Profilim
+                </a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Film ara" aria-label="Ara">
+            <button class="btn btn-light my-1 my-sm-0" type="submit">Ara</button>
+            <button class="btn btn-outline-light my-2 my-sm-0 ml-2" onclick="(function() {
+                window.open('login.html', '_blank');
+            })(); return false;">Giriş Yap</button>
+        </form>
+    </div>
+</nav>
+<!-- /Navbar -->
 
     <!-- Profile Icerik -->
     <div class="container mt-4">
@@ -165,8 +152,8 @@
                     <div class="container mt-4">
                         <div class="row" id="film-gallery">
                             <!-- Film cards will be inserted here by JavaScript -->
-                            
-                             
+
+
                         </div>
                         <div class="text-center mt-4">
                             <a href="#" class="btn btn-primary mb-2">Hepsini Görüntüle</a>
@@ -241,7 +228,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-
+    <script src="scripts/main.js"></script>
     <!-- /Bootstrap JS ve ek scriptler -->
 </body>
 
