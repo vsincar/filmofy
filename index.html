@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmofy</title>
-    <!--- Angular Routing kodlari (Single Page Application islemi) Bu sayede sayfalar sanki sayfa degismiyormus gibi calisir -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-<!-- Angular ve routing -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body style="background-color: #5D0E41;" ng-app="myApp">
+<body style="background-color: #5D0E41;">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
@@ -48,6 +44,7 @@
                         <a class="dropdown-item" href="#"
                             onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
                         <a class="dropdown-item" href="#" onclick="filterFilms('Gizem'); return false;">Gizem</a>
+                        <a class="dropdown-item" href="#" onclick="filterFilms('Komedi'); return false;">Komedi</a>
                         <a class="dropdown-item" href="#" onclick="filterFilms('Korku'); return false;">Korku</a>
                         <a class="dropdown-item" href="#" onclick="filterFilms('Macera'); return false;">Macera</a>
                         <a class="dropdown-item" href="#" onclick="filterFilms('Romantik'); return false;">Romantik</a>
