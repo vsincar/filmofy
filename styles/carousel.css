@@ -1,0 +1,42 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    height: auto; /* Ensure slides adjust to content */
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px; /* Set height to maintain size consistency */
+    border: 2px solid #fff; /* Border color */
+    border-radius: 50%; /* Round shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Adjust as needed */
+}
+
+.carousel-control-next {
+    right: 10px; /* Adjust as needed */
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; /* Remove default background */
+    background-size: 100% 100%; /* Ensure icons fit well */
+    background-repeat: no-repeat; /* Prevent icon duplication */
+}
+
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff; /* Icon color */
+}
