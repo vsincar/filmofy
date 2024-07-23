@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const displayFilms = (filmsToDisplay) => {
         const filmList = document.querySelector('#film-list');
-        filmList.innerHTML = ''; // Clear existing film cards
+        filmList.innerHTML = ''; 
 
         filmsToDisplay.forEach(film => {
             const filmCard = document.createElement('div');
