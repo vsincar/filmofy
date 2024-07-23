@@ -27,10 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Yıl:</strong> ${film.year}</p>
                 <p><strong>Dil:</strong> ${film.language}</p>
                 <p><strong>Ülke:</strong> ${film.country}</p>
-                <p><strong>IMDB Puanı:</strong> <span class="badge badge-warning">${film.imdbRating}</span></p>
-                <p><strong>Özet:</strong> ${film.summary}</p>
-                <p><strong>Açıklama:</strong> ${film.description}</p>
-                <p><strong>Editörün Yorumu:</strong> ${film.review}</p>
+                <p><strong>IMDB Puanı:</strong> <span class="badge badge-warning">${film.imdbRating}</span></p>               
+                <p><strong>Açıklama:</strong> ${film.description}</p>               
                 <div><strong>Tür:</strong> ${film.genre.split(',').map(genre => `<span class="badge badge-primary genre">${genre.trim()}</span>`).join('')}</div>
             </div>
         `;
