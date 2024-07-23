@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (film) {
                 displayFilmDetails(film);
             } else {
-                document.querySelector('#film-container').innerHTML = '<p>Film not found.</p>';
+                document.querySelector('#film-container').innerHTML = '<p>Film bulunamadı.</p>';
             }
         })
         .catch(error => console.error('Error fetching film details:', error));
