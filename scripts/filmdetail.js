@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>IMDB Puanı:</strong> <span class="badge badge-warning">${film.imdbRating}</span></p>               
                 <p><strong>Açıklama:</strong> ${film.description}</p>               
                 <div><strong>Tür:</strong> ${film.genre.split(',').map(genre => `<span class="badge badge-primary genre">${genre.trim()}</span>`).join('')}</div>
+                <div class="mt-4">
+    <button class="btn btn-outline-danger mr-2">
+        <i class="fas fa-heart"></i> Favorilere ekle
+    </button>
+    <button class="btn btn-outline-info">
+        <i class="fas fa-eye mr-2"></i> İzleme listesine ekle
+    </button>
+</div>
+
             </div>
         `;
     };
