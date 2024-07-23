@@ -24,19 +24,28 @@
 }
 
 .carousel-control-prev {
-    left: 10px; /* Adjust as needed */
+    left: 10px; 
 }
 
 .carousel-control-next {
-    right: 10px; /* Adjust as needed */
+    right: 10px; 
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: transparent; /* Remove default background */
-    background-size: 100% 100%; /* Ensure icons fit well */
-    background-repeat: no-repeat; /* Prevent icon duplication */
+    background-color: transparent; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .carousel-control-prev-icon::before, .carousel-control-next-icon::before {
-    font-size: 1.5rem; /* Adjust icon size */
-    color: #fff; /* Icon color */
+    font-size: 1.5rem; /* icon boyutu ayarla*/
+    color: #fff; /* Icon renk */
+}
+/* aktiflik durumu */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(15, 189, 15);
+    display: inline-block;
+    margin-right: 10px;
 }
