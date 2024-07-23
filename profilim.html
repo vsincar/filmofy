@@ -9,60 +9,55 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
     <style>
-        .film-card {
-            width: 80px;
-            /* Adjust the width as needed */
-            height: 120px;
-            /* Adjust the height as needed */
-            margin: 5px;
+ .carousel {
+    position: relative;
+    overflow: hidden;
+}
 
-        }
+.carousel-inner {
+    position: relative;
+    width: 100%;
+}
 
-        .film-card img {
-            padding: 2px;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.carousel-item {
+    height: auto; /* Ensure slides adjust to content */
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px; /* Set height to maintain size consistency */
+    border: 2px solid #fff; /* Border color */
+    border-radius: 50%; /* Round shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
 
-        .film-card .card-body {
-            text-align: center;
-            padding: 5px;
-        }
+.carousel-control-prev {
+    left: 10px; /* Adjust as needed */
+}
 
-        .film-card .film-title {
-            position: absolute;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
-            padding: 5px;
-        }
+.carousel-control-next {
+    right: 10px; /* Adjust as needed */
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; /* Remove default background */
+    background-size: 100% 100%; /* Ensure icons fit well */
+    background-repeat: no-repeat; /* Prevent icon duplication */
+}
 
-        .film-title {
-            background: rgba(0, 0, 0, 0.9);
-            display: block;
-        }
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #fff; /* Icon color */
+}
 
-        .filmIsmi {
-            display: none;
-            position: absolute;
-            border: 1px solid #000;
-            padding: 10px;
-            background-color: #FFF;
-            z-index: 10;
-        }
 
-        .film-card:hover .filmIsmi {
-            opacity: 1;
-            /* Show on hover */
-        }
     </style>
-</head>
-
+    
+    </head>
 <body style="background-color: #5D0E41;">
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
@@ -128,65 +123,73 @@
 </nav>
 <!-- /Navbar -->
 
-    <!-- Profile Icerik -->
-    <div class="container mt-4">
-        <div class="row p-2 rounded mb-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img src="images/profile-photo-default.png" class="img-fluid rounded-circle mb-3"
-                            alt="User Image" style="width: 100px;">
-                        <h4 class="card-title">Kullanıcı Adı</h4>
-                        <p class="card-text">kullanici@mail.com</p>
-                        <a href="#" class="btn btn-primary">Profili Düzenle</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="center">
-                    <h5 class="text-align-center">Hakkımda</h5>
+   <!-- Profile Icerik -->
+<div class="container mt-4">
+    <div class="row p-2 rounded mb-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="images/profile-photo-default.png" class="img-fluid rounded-circle mb-3" alt="User Image" style="width: 100px;">
+                    <h4 class="card-title">Kullanıcı Adı</h4>
+                    <p class="card-text">kullanici@mail.com</p>
+                    <a href="#" class="btn btn-primary">Profili Düzenle</a>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <div class="card-header"><i class="fas fa-heart text-danger mr-2"></i>Favori Filmlerim</div>
+            <hr>
+            <div class="center">
+                <h5 class="text-align-center">Hakkımda</h5>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-heart text-danger mr-2"></i>Favori Filmlerim</div>
+                <div class="container mt-4">
+                  <!-- Carousel for favorite films -->
+<div id="carouselFavorites" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Carousel items will be injected here by JavaScript -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselFavorites" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Önceki</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselFavorites" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Sonraki</span>
+    </a>
+</div>
+<!-- End Carousel -->
 
-                    <div class="container mt-4">
-                        <div class="row" id="film-gallery">
-                            <!-- Film cards will be inserted here by JavaScript -->
-
-
-                        </div>
-                        <div class="text-center mt-4">
-                            <a href="#" class="btn btn-primary mb-2">Hepsini Görüntüle</a>
-                        </div>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-primary mb-2">Hepsini Görüntüle</a>
                     </div>
-
-
                 </div>
-                <div class="card mb-4">
-                    <div class="card-header"><i class="fas fa-comments mr-2"></i>Yorumlarım</div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#">Film 1 hakkında yorumum...</a></li>
-                            <li class="list-group-item"><a href="#">Film 2 hakkında yorumum...</a></li>
-                            <li class="list-group-item"><a href="#">Film 3 hakkında yorumum...</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-comments mr-2"></i>Yorumlarım</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Film 1 hakkında yorumum...</a></li>
+                        <li class="list-group-item"><a href="#">Film 2 hakkında yorumum...</a></li>
+                        <li class="list-group-item"><a href="#">Film 3 hakkında yorumum...</a></li>
+                    </ul>
                 </div>
-                <div class="card mb-4">
-                    <div class="card-header"><i class="fas fa-eye mr-2"></i>İzleme Listem</div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Film 1</li>
-                            <li class="list-group-item">Film 2</li>
-                            <li class="list-group-item">Film 3</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header"><i class="fas fa-eye mr-2"></i>İzleme Listem</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Film 1</li>
+                        <li class="list-group-item">Film 2</li>
+                        <li class="list-group-item">Film 3</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Profile Icerik -->
+</div>
+<!-- Profile Icerik -->
+
     <!-- Footer -->
     <footer class="footer pt-4 rounded-top">
         <div class="container">
