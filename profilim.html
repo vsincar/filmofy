@@ -68,7 +68,13 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Film ara" aria-label="Ara">
+             <!-- Güncellenmiş arama formu -->
+             <div class="search-container position-relative">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Filmleri ara"
+                    aria-label="Ara">
+                <div id="suggestion-box" class="suggestion-box"></div>
+            </div>
+            <!-- Öneri kutusu eklendi -->
             <button class="btn btn-light my-1 my-sm-0" type="submit">Ara</button>
             <button class="btn btn-outline-light my-2 my-sm-0 ml-2" onclick="(function() {
                 window.open('login.html', '_blank');
@@ -190,7 +196,10 @@
         </div>
     </footer>
     <!-- /Footer -->
-
+     <!-- Place holder animasyonu import-->
+     <script src="scripts/placeholder_anim.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+     <!-- Placeholder animasyonu import bitti-->
     <!-- Bootstrap JS ve ek scriptler -->
     <script src="scripts/favfilm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -200,6 +209,8 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
+     <!-- Arama fonksiyonu-->
+     <script src="scripts/suggestions.js"></script>
     <!-- /Bootstrap JS ve ek scriptler -->
 </body>
 
