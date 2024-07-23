@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let films = [];
+    let currentPage = 1;
+    const filmsPerPage = 20;
 
     const displayFilms = (filmsToDisplay) => {
         const filmList = document.querySelector('#film-list');
@@ -53,27 +55,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const renderPagination = (totalFilms) => {
+        const paginationButtons = document.querySelector('#pagination-buttons');
+        paginationButtons.innerHTML = '';
+
+        const totalPages = Math.ceil(totalFilms / filmsPerPage);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.classList.add('btn', 'btn-outline-dark', 'mx-1');
+            button.textContent = i;
+            button.addEventListener('click', () => {
+                currentPage = i;
+                paginateFilms();
+            });
+            paginationButtons.appendChild(button);
+        }
+    };
+
+    const paginateFilms = () => {
+        const startIndex = (currentPage - 1) * filmsPerPage;
+        const endIndex = startIndex + filmsPerPage;
+        const filmsToDisplay = films.slice(startIndex, endIndex);
+        displayFilms(filmsToDisplay);
+    };
+
     fetch('database/films.json')
         .then(response => response.json())
         .then(data => {
             films = data;
+            renderPagination(films.length);
+            paginateFilms();
 
             const selectedGenre = localStorage.getItem('selectedGenre');
             if (selectedGenre) {
                 filterFilms(selectedGenre);
                 localStorage.removeItem('selectedGenre');
             } else {
-                displayFilms(films);
+                displayFilms(films.slice(0, filmsPerPage));
             }
         })
         .catch(error => console.error('Error fetching films:', error));
 
     window.filterFilms = (genre) => {
         const filteredFilms = films.filter(film => film.genre.includes(genre));
-        displayFilms(filteredFilms);
+        renderPagination(filteredFilms.length);
+        displayFilms(filteredFilms.slice(0, filmsPerPage));
     };
 
     window.showAllFilms = () => {
-        displayFilms(films);
+        renderPagination(films.length);
+        displayFilms(films.slice(0, filmsPerPage));
     };
 });
