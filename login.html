@@ -37,27 +37,27 @@
                         <img src="images/kategoriler.svg" class="icon"> Kategoriler
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Aile'); return false;">Aile</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Aksiyon'); return false;">Aksiyon</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Aile'); window.location.href='index.html'; return false;">Aile</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Aksiyon'); window.location.href='index.html'; return false;">Aksiyon</a>
                         <a class="dropdown-item" href="#"
-                            onclick="filterFilms('Animasyon'); return false;">Animasyon</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Dram'); return false;">Dram</a>
+                        onclick="localStorage.setItem('selectedGenre', 'Animasyon'); window.location.href='index.html'; return false;">Animasyon</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Dram'); window.location.href='index.html'; return false;">Dram</a>
                         <a class="dropdown-item" href="#"
                             onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Gizem'); return false;">Gizem</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Korku'); return false;">Korku</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Macera'); return false;">Macera</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Romantik'); return false;">Romantik</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Savaş'); return false;">Savaş</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Suç'); return false;">Suç</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Tarih'); return false;">Tarih</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Gizem'); window.location.href='index.html'; return false;">Gizem</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Korku'); window.location.href='index.html'; return false;">Korku</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Macera'); window.location.href='index.html'; return false;">Macera</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Romantik'); window.location.href='index.html'; return false;">Romantik</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Savaş'); window.location.href='index.html'; return false;">Savaş</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Suç'); window.location.href='index.html'; return false;">Suç</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Tarih'); window.location.href='index.html'; return false;">Tarih</a>
                         <a class="dropdown-item" href="#"
-                            onclick="filterFilms('Biyografi'); return false;">Biyografi</a>
+                        onclick="localStorage.setItem('selectedGenre', 'Biyografi'); window.location.href='index.html'; return false;">Biyografi</a>
                         <a class="dropdown-item" href="#"
-                            onclick="filterFilms('Bilim-Kurgu'); return false;">Bilim-Kurgu</a>
-                        <a class="dropdown-item" href="#" onclick="filterFilms('Dini'); return false;">Dini</a>
+                        onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Bilim-Kurgu</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Dini</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="showAllFilms(); return false;">Tüm Kategoriler</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.removeItem('selectedGenre'); window.location.href='index.html'; return false;">Tüm Kategoriler</a>
                     </div>
                 </li>
                 <li class="nav-item">

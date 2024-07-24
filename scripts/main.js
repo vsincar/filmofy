@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     let films = [];
-    let currentPage = 1; //suanki sayfa
-    const filmsPerPage = 20; //sayfa basina film sayisi
+    let currentPage = 1; // current page
+    const filmsPerPage = 20; // films per page
 
     const displayFilms = (filmsToDisplay) => {
         const filmList = document.querySelector('#film-list');
         filmList.innerHTML = ''; 
 
-        //filmleri listeleme islemi
+        // Displaying films
         filmsToDisplay.forEach(film => {
             const filmCard = document.createElement('div');
             filmCard.classList.add('film-card');
