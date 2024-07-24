@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     let films = [];
-    let currentPage = 1;
-    const filmsPerPage = 20;
+    let currentPage = 1; //suanki sayfa
+    const filmsPerPage = 20; //sayfa basina film sayisi
 
     const displayFilms = (filmsToDisplay) => {
         const filmList = document.querySelector('#film-list');
         filmList.innerHTML = ''; 
 
+        //filmleri listeleme islemi
         filmsToDisplay.forEach(film => {
             const filmCard = document.createElement('div');
             filmCard.classList.add('film-card');
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', () => {
                 currentPage = i;
                 paginateFilms();
+                document.querySelector('#film-list').scrollIntoView({ behavior: 'smooth' });
             });
             paginationButtons.appendChild(button);
         }
