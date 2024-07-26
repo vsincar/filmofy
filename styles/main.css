@@ -17,23 +17,10 @@
 }
 
 .logo {
-    font-family: 'Galada', 'Times New Roman', Times, serif;
-    color: #FF204E;
-    display: inline-block;
-    font-size: 1.8rem;
+    width: 100px;
+    margin-left: 15px;
 }
 
-.ilkharf {
-    font-family: 'Galada', 'Times New Roman', Times, serif;
-    color: #FF204E;
-    font-size: 1.8em;
-}
-
-.kalanharf {
-    font-family: 'Galada', 'Times New Roman', Times, serif;
-    color: #FF204E;
-    font-size: 1em;
-}
 
 .nav-link,
 .icon {
