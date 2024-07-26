@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     let films = [];
     let currentPage = 1; // current page
-    const filmsPerPage = 20; // films per page
+    const filmsPerPage = 20; // sayfa basina 20 film
 
     const displayFilms = (filmsToDisplay) => {
         const filmList = document.querySelector('#film-list');

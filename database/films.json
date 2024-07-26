@@ -808,7 +808,7 @@
     {
         "id": 63,
         "name": "Now You See Me",
-        "image": "film-images/nowyouseeme.jpg",
+        "image": "film-images/now-you-see-me.jpg",
         "imdbRating": "6.5",
         "year": 2013,
         "genre": "Aksiyon, Suç",
@@ -1783,7 +1783,7 @@
     {
         "id": 138,
         "name": "Pek Yakında",
-        "image": "film-images/pekyakında.jpg",
+        "image": "film-images/pekyakinda.jpg",
         "imdbRating": "6.8",
         "year": 2014,
         "genre": "Komedi",
@@ -1848,7 +1848,7 @@
     {
         "id": 143,
         "name": "Bulantı",
-        "image": "film-images/bulantı.jpg",
+        "image": "film-images/bul.jpg",
         "imdbRating": "7.8",
         "year": 2015,
         "genre": "Dram",
@@ -2302,8 +2302,8 @@
     },
     {
         "id": 178,
-        "name": "Sihirbazlar Çetesi (Seri)",
-        "image": "film-images/now-you-see-me-series.jpg",
+        "name": "Sihirbazlar Çetesi",
+        "image": "film-images/now-you-see-me.jpg",
         "imdbRating": "7.3",
         "year": 2013,
         "genre": "Suç, Gizem",
@@ -2420,7 +2420,7 @@
     {
         "id": 187,
         "name": "Kış Uykusu",
-        "image": "film-images/kısuykusu.jpg",
+        "image": "film-images/kisuykusu.jpg",
         "imdbRating": "8.1",
         "year": 2014,
         "genre": "Dram",
@@ -2680,7 +2680,7 @@
     {
         "id": 207,
         "name": "Ertuğrul 1890",
-        "image": "film-images/ertuğrul-1890.jpg",
+        "image": "film-images/ertugrul-1890.jpg",
         "imdbRating": "7.0",
         "year": 2015,
         "genre": "Dram, Tarihi",

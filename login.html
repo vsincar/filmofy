@@ -45,6 +45,7 @@
                         <a class="dropdown-item" href="#"
                             onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
                         <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Gizem'); window.location.href='index.html'; return false;">Gizem</a>
+                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Komedi'); window.location.href='index.html'; return false;">Komedi</a>
                         <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Korku'); window.location.href='index.html'; return false;">Korku</a>
                         <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Macera'); window.location.href='index.html'; return false;">Macera</a>
                         <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Romantik'); window.location.href='index.html'; return false;">Romantik</a>
@@ -127,9 +128,9 @@
                 </div>
             </form>
 
-            <!-- Hidden registration section -->
+            <!-- Saklanmis kayit alani -->
             <form id="signup-form" action="#" method="post" class="needs-validation mb-4 mt-4 p-4"
-                style="display: none;" novalidate>
+                style="display: none;" novalidate> <!--Display none varsayilan olarak gorunmuyor-->
                 <div class="form-group">
                     <label for="signup_username">Kullanıcı adı:</label>
                     <input type="text" class="form-control" id="signup_username"
@@ -158,30 +159,15 @@
 
             </form>
         </div>
-        <!-- /container -->
+        <!-- /Saklanmis alan -->
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#signup-link').click(function (e) {
-                e.preventDefault();
-                $('#login-form').hide();
-                $('#signup-form').show();
-            });
-
-            $('#login-link').click(function (e) {
-                e.preventDefault();
-                $('#signup-form').hide();
-                $('#login-form').show();
-            });
-        });
-    </script>
 
     <script>
         //kayit olun butonuna tiklandiktan sonra kayitolma formu ortaya cikarir
         document.getElementById('signup-link').addEventListener('click', function (event) {
             event.preventDefault();
-            document.getElementById('signup-form').style.display = 'block';
+            document.getElementById('signup-form').style.display = 'block'; //display: block yaptigimizda form gorunur
         });
     </script>
 
@@ -198,9 +184,9 @@
                 <div class="col-md-4">
                     <h5>Emeği Geçenler</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://vsincar.github.io/my-portfolio">Veysel Sincar</a></li>
-                        <li><a href="https://github.com/emir-emir">Emirsah Erden</a></li>
-                        <li><a href="https://github.com/kagdas">Kübra Ağdaş</a></li>
+                        <li><a href="https://vsincar.github.io/my-portfolio" target="_blank">Veysel Sincar</a></li>
+                        <li><a href="https://github.com/emir-emir" target="_blank">Emirsah Erden</a></li>
+                        <li><a href="https://github.com/kagdas" target="_blank">Kübra Ağdaş</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
