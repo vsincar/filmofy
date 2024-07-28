@@ -1,13 +1,3 @@
-/* Font Cagirma kodu burada biter */
-@font-face {
-    font-family: 'Galada';
-    src: url('/fonts/galada.ttf') format(truetype);
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* Font Cagirma kodu burada biter */
-
 .nav-bg {
     background-color: #00224D;
 }
@@ -22,7 +12,6 @@
     width: 6.25rem;
 }
 
-
 .nav-link,
 .icon {
     transition: opacity 0.3s ease;
@@ -34,7 +23,9 @@
 .icon:hover {
     opacity: 1;
 }
-
+#bosluk{
+    height: 90px;
+}
 .icon {
     width: 15px;
     height: 15px;
