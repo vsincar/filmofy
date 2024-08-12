@@ -1,177 +1,335 @@
+:root[data-theme="light"] {
+  --page-bg: #5d0e41;
+  --navbar-bg: #00224d;
+  --white-color: #fff;
+  --black-color: #000;
+
+  --row-bg: #fff;
+
+  --film-card-hover-bg: rgba(0, 0, 0, 0.9);
+  --film-overlay-text-color: #fff;
+  --imdb-bg: #f5c518;
+
+  --search-input-bg: white;
+  --placeholder-color: #aaa;
+
+  --badge-primary: #007bff;
+
+  --film-heart: #fff;
+
+  --carousel-icon-border: var(--row-bg);
+  --carousel-icon-shadow: rgba(0, 0, 0, 0.3);
+  --carousel-icon-bg: rgba(0, 0, 0, 0.5);
+
+  --box-shadow: rgba(0, 0, 0, 0.3); /*Carousel icin */
+  --carousel-bg: rgba(0, 0, 0, 0.5);
+
+  --suggestion-hover: #f0f0f0;
+
+  --switch-bg: #f5f5f6;
+  --switch-circle-bg: #ffd371;
+  --switch-circle-pos: 0.12rem;
+  --icon-sun: #997f44;
+  --icon-moon: #b1b0b5;
+}
+:root[data-theme="dark"] {
+  --page-bg: #311023;
+  --navbar-bg: #0c1429;
+  --white-color: #000;
+  --black-color: #fff;
+
+  --row-bg: #000;
+
+  --film-card-hover-bg: rgba(255, 255, 255, 0.9);
+  --film-overlay-text-color: #000;
+  --imdb-bg: #f5c518;
+  --film-title-bg: rgba(255, 255, 255, 0.6);
+
+  --search-input-bg: #2d2c35;
+  --placeholder-color: #f5f5f6;
+
+  --badge-primary: #1f3d77;
+
+  --film-heart: #000;
+
+  --carousel-icon-border: var(--row-bg);
+  --carousel-icon-shadow: rgba(255, 255, 255, 0.3);
+  --carousel-icon-bg: rgba(114, 114, 114, 0.5);
+
+  --box-shadow: rgba(0, 0, 0, 0.3); /*Carousel icin */
+  --carousel-bg: rgba(0, 0, 0, 0.5);
+
+  --suggestion-hover: #f0f0f0;
+
+  --switch-bg: #2d2c35;
+  --switch-circle-bg: #7190ff;
+  --switch-circle-pos: 2.66rem;
+  --icon-sun: #77757e;
+  --icon-moon: #dce3ff;
+}
+:root {
+  --default-transition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .nav-bg {
-    background-color: #00224D;
+  background-color: var(--navbar-bg);
 }
 
 .nav-link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .logo {
-    margin-left: 15px;
-    height: auto;
-    width: 6.25rem;
+  margin-left: 15px;
+  height: auto;
+  width: 6.25rem;
 }
 
 .nav-link,
 .icon {
-    transition: opacity 0.3s ease;
-    text-decoration: none;
-    color: #333;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  color: #333;
 }
 
 .nav-link:hover,
 .icon:hover {
-    opacity: 1;
+  opacity: 1;
 }
-#bosluk{
-    height: 5.35rem;
+#bosluk {
+  height: 5.35rem;
 }
 .icon {
-    width: 15px;
-    height: 15px;
-    margin-right: 2px;
-    margin-bottom: 4px;
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+  margin-bottom: 4px;
 }
 
 .row {
-    background-color: #FFF;
-    display: flex;
-   justify-items: auto;
+  background-color: var(--row-bg);
+  display: flex;
+  justify-items: auto;
+  padding-top: 5px;
 }
 
 .film-card {
-    justify-self: flex-start;
-    position: relative;
-    margin: 5px 3px;
-    overflow: hidden;
-    cursor: pointer; /* Tıklanabilir olduğunu gösterir */
+  justify-self: flex-start;
+  position: relative;
+  margin: 5px 3px;
+  overflow: hidden;
+  cursor: pointer; /* Tıklanabilir olduğunu gösterir */
 }
 
 .film-card:hover .film-overlay {
-    background-color: rgba(0, 0, 0, 0.9);
-    
-
+  background-color: var(--film-card-hover-bg);
 }
 
 .film-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 99%;
-    height: 99%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 20px; /* Örneğin padding değeri eklendi */
-    box-sizing: border-box; /* Padding için kutu modelini sınırlı hale getir */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--film-card-hover-bg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 99%;
+  height: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  text-align: center;
+  padding: 20px; /* Örneğin padding değeri eklendi */
+  box-sizing: border-box; /* Padding için kutu modelini sınırlı hale getir */
 }
 
 .film-overlay-content {
-    max-width: 93%; /* İçerik genişliğini ayarla */
-    max-height: 99%;
-    padding: 5px; /* İçerik için padding değeri eklendi */
+  max-width: 93%; /* İçerik genişliğini ayarla */
+  max-height: 99%;
+  padding: 5px; /* İçerik için padding değeri eklendi */
 }
 
-
 .film-genres {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .badge {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .badge-primary {
-    cursor: pointer;
-    background-color: #007bff;
+  cursor: pointer;
+  background-color: var(--badge-primary);
 }
 
 .film-description {
-    font-size: 0.9em;
-    margin-bottom: 10px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 .film-card:hover .film-overlay {
-    opacity: 1;
-
+  opacity: 1;
 }
 
-
 .film-card img {
-    width: 260px;
-    height: 420px;
+  width: 260px;
+  height: 420px;
 }
 
 .film-title,
 .film-imdb,
 .film-heart {
-    position: absolute;
-    color: white;
+  position: absolute;
 }
 
 .film-imdb {
-    user-select: none;
+  user-select: none;
 }
 
 .film-title {
-    color: white;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    text-align: center;
-    width: 99%;
-    border-top: solid 1px #FFF;
+  color: var(--white-color);
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--film-title-bg);
+  padding: 5px 10px;
+  text-align: center;
+  width: 99%;
+  border-top: solid 1px var(--black-color);
+}
+#searchInput {
+  background-color: var(--search-input-bg);
+  color: var(--placeholder-color);
 }
 
 .film-imdb {
-    top: 10px;
-    left: 10px;
-    background-color: #f5c518;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #000;
-    font-weight: bold;
+  top: 10px;
+  left: 10px;
+  background-color: var(--imdb-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--black-color);
+  font-weight: bold;
 }
 
 .film-heart {
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: color 0.4s ease, transform 0.2s ease;
-    color: white;
+  color: var(--white-color);
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.4s ease, transform 0.2s ease;
 }
 
 .film-heart:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .film-heart.liked {
-    color: red;
+  color: red;
 }
 
 .footer {
-    background-color: #00224D;
-    color: #FFF;
+  background-color: var(--navbar-bg);
+  color: var(--white-color);
 }
 
 .footer a {
-    color: #FFF;
-    text-decoration: none;
+  color: var(--white-color);
+  text-decoration: none;
 }
 
 .footer a:hover {
-    color:#FFF;
-    text-decoration: underline;
+  color: var(--white-color);
+  text-decoration: underline;
 }
 
 .social-icons a {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+}
+.theme-texts {
+  color: var(--black-color);
+}
+.theme-primary-bg {
+  background-color: var(--badge-primary);
+}
+.theme-bg {
+  background-color: var(--row-bg);
+}
+.footer-texts,
+a.footer-texts {
+  color: #fff;
+}
+.sayfa-butonlari {
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid var(--black-color);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.sayfa-butonlari:hover {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border-color: var(--black-color);
+}
+
+/* Tema degistirici toggle buton */
+
+#theme-switcher {
+  margin-left: 5px;
+  background-color: var(--switch-bg);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1.33rem;
+  cursor: pointer;
+  padding: 0.66rem;
+  position: relative;
+  transition: var(--default-transition);
+}
+#theme-switcher::before {
+  content: "";
+  position: absolute;
+  width: 2.22rem;
+  height: 2.22rem;
+  background-color: var(--switch-circle-bg);
+  border-radius: 50px;
+  z-index: 0;
+  left: 0;
+  transform: translateX(var(--switch-circle-pos));
+  transition: var(--default-transition);
+}
+#theme-switcher svg {
+  z-index: 1;
+  transition: var(--default-transition);
+}
+#icon-sun {
+  fill: var(--icon-sun);
+  border-radius: 50px;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#icon-moon {
+  fill: var(--icon-moon);
+  border-radius: 50px;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#toggle-button {
+  width: 5.1rem;
 }

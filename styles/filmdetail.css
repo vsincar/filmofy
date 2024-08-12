@@ -1,39 +1,34 @@
 body {
-    background-color: #5D0E41;
-    color: white;
+  background-color: #5d0e41;
+  color: white;
 }
 
 .comment-box {
-    background-color: #00224D;
-    padding: 25px;
-    border-radius: 5px;
+  background-color: var(--navbar-bg);
+  padding: 25px;
+  border-radius: 5px;
 }
 
 .comment-box button {
-    color: white;
-    border-color: white;
-}
-
-.comment-box button.liked {
-    background-color: white;
-    color: red;
+  color: white;
+  border-color: white;
 }
 
 .imdb-rating {
-    background-color: yellow;
-    color: black;
-    display: inline-block;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-weight: bold;
+  background-color: #f5c518;
+  color: black;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: bold;
 }
 .film-details {
-    margin: 20px;
+  margin: 20px;
 }
 .film-details img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 .film-info {
-    margin-top: 20px;
+  margin-top: 20px;
 }

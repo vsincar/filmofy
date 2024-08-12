@@ -1,0 +1,9 @@
+.texts {
+  color: var(--black-texts);
+}
+.primary-bg {
+  background-color: var(--badge-primary);
+}
+.theme-bg {
+  background-color: var(--row-bg);
+}

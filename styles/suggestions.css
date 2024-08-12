@@ -2,52 +2,55 @@
 
 /* Arama container */
 .search-container {
-    position: relative; /* Öneri kutusunun doğru konumlandırılması için */
+  position: relative; /* Öneri kutusunun doğru konumlandırılması için */
 }
 ::placeholder {
-    color: #aaa;
-    opacity: 1;
+  color: #aaa;
+  opacity: 1;
 }
 
 /* Öneri kutusu stili */
 .suggestion-box {
-    display: none; /* Başlangıçta gizli */
-    position: absolute;
-    top: 100%; /* Input'un hemen altına yerleştirir */
-    left: 0;
-    width: 100%; /* Input genişliği kadar */
-    max-height: 300px; /* Maksimum yükseklik */
-    overflow-y: auto; /* Uzun liste için kaydırma */
-    background-color: white; /* Arka plan rengi */
-    border: 1px solid #ddd; /* Sınır */
-    border-radius: 0 0 4px 4px; /* Köşe yuvarlama */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Gölge */
-    z-index: 1000; /* Üzerinde diğer öğelerin görünmesini engeller */
+  display: none; /* Başlangıçta gizli */
+  position: absolute;
+  top: 100%; /* Input'un hemen altına yerleştirir */
+  left: 0;
+  width: 100%; /* Input genişliği kadar */
+  max-height: 300px; /* Maksimum yükseklik */
+  overflow-y: auto; /* Uzun liste için kaydırma */
+  color: var(--black-color); /* yazi rengi */
+  background-color: var(--row-bg); /* Arka plan rengi */
+  border: 1px solid #ddd; /* Sınır */
+  border-radius: 0 0 4px 4px; /* Köşe yuvarlama */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Gölge */
+  z-index: 1000; /* Üzerinde diğer öğelerin görünmesini engeller */
 }
 
 /* Öneri öğeleri için stil */
 .suggestion-item {
-    cursor: pointer;
-    padding: 10px; /* İç boşluk */
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd; /* Ayırıcı çizgi */
-    transition: background-color 0.3s; /* Arka plan renk geçişi */
+  cursor: pointer;
+  padding: 10px; /* İç boşluk */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* Ayırıcı çizgi */
+  transition: background-color 0.3s; /* Arka plan renk geçişi */
 }
 
 .suggestion-item:last-child {
-    border-bottom: none; /* Son öğede alt sınırı kaldırır */
+  border-bottom: none; /* Son öğede alt sınırı kaldırır */
 }
 
 .suggestion-item:hover {
-    background-color: #f0f0f0; /* Hover etkisi */
+  /* Hover etkisi */
+  background-color: var(--placeholder-color);
+  color: black;
 }
 
 /* Öneri resimleri için stil */
 .suggestion-img {
-    border-radius: 4px; /* Köşe yuvarlama */
-    width: 50px; /* Sabit genişlik */
-    height: 50px; /* Sabit yükseklik */
-    object-fit: cover; /* Resmi uygun şekilde sığdırır */
-    margin-right: 10px; /* Sağ boşluk */
+  border-radius: 4px; /* Köşe yuvarlama */
+  width: 50px; /* Sabit genişlik */
+  height: 50px; /* Sabit yükseklik */
+  object-fit: cover; /* Resmi uygun şekilde sığdırır */
+  margin-right: 10px; /* Sağ boşluk */
 }

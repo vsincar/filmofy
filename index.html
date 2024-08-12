@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles/suggestions.css">
 </head>
+<script>
+    // Yerel dosya olarak ayarla
+    let localS = localStorage.getItem("theme");
+    themeToSet = localS;
 
-<body style="background-color: #5D0E41;">
+    //Eger yerel dosya yoksa sistem temasina bakacak
+    if (!localS) {
+        themeToSet = window.matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light";
+    }
 
+    //Dogru olan temayi sececek
+    document.documentElement.setAttribute("data-theme", themeToSet);
+</script>
+
+<body style="background-color: var(--page-bg)">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top">
         <a class="navbar-brand" href="index.html">
@@ -37,28 +51,42 @@
                         <img src="images/kategoriler.svg" class="icon"> Kategoriler
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Aile'); window.location.href='index.html'; return false;">Aile</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Aksiyon'); window.location.href='index.html'; return false;">Aksiyon</a>
                         <a class="dropdown-item" href="#"
-                        onclick="localStorage.setItem('selectedGenre', 'Animasyon'); window.location.href='index.html'; return false;">Animasyon</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Dram'); window.location.href='index.html'; return false;">Dram</a>
+                            onclick="localStorage.setItem('selectedGenre', 'Aile'); window.location.href='index.html'; return false;">Aile</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Aksiyon'); window.location.href='index.html'; return false;">Aksiyon</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Animasyon'); window.location.href='index.html'; return false;">Animasyon</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Dram'); window.location.href='index.html'; return false;">Dram</a>
                         <a class="dropdown-item" href="#"
                             onclick="filterFilms('Fantastik'); return false;">Fantastik</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Gizem'); window.location.href='index.html'; return false;">Gizem</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Komedi'); window.location.href='index.html'; return false;">Komedi</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Korku'); window.location.href='index.html'; return false;">Korku</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Macera'); window.location.href='index.html'; return false;">Macera</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Romantik'); window.location.href='index.html'; return false;">Romantik</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Savaş'); window.location.href='index.html'; return false;">Savaş</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Suç'); window.location.href='index.html'; return false;">Suç</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Tarih'); window.location.href='index.html'; return false;">Tarih</a>
                         <a class="dropdown-item" href="#"
-                        onclick="localStorage.setItem('selectedGenre', 'Biyografi'); window.location.href='index.html'; return false;">Biyografi</a>
+                            onclick="localStorage.setItem('selectedGenre', 'Gizem'); window.location.href='index.html'; return false;">Gizem</a>
                         <a class="dropdown-item" href="#"
-                        onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Bilim-Kurgu</a>
-                        <a class="dropdown-item" href="#" onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Dini</a>
+                            onclick="localStorage.setItem('selectedGenre', 'Komedi'); window.location.href='index.html'; return false;">Komedi</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Korku'); window.location.href='index.html'; return false;">Korku</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Macera'); window.location.href='index.html'; return false;">Macera</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Romantik'); window.location.href='index.html'; return false;">Romantik</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Savaş'); window.location.href='index.html'; return false;">Savaş</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Suç'); window.location.href='index.html'; return false;">Suç</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Tarih'); window.location.href='index.html'; return false;">Tarih</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Biyografi'); window.location.href='index.html'; return false;">Biyografi</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Bilim-Kurgu</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.setItem('selectedGenre', 'Bilim-Kurgu'); window.location.href='index.html'; return false;">Dini</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="localStorage.removeItem('selectedGenre'); window.location.href='index.html'; return false;">Tüm Kategoriler</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="localStorage.removeItem('selectedGenre'); window.location.href='index.html'; return false;">Tüm
+                            Kategoriler</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -80,13 +108,25 @@
                     window.open('login.html', '_blank');
                 })(); return false;">Giriş Yap</button>
             </form>
+            <!--Toggle buton-->
+            <div id="toggle-button">
+                <div id="theme-switcher">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="icon-sun" viewBox="0 0 16 16">
+                        <path
+                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="icon-moon">
+                        <path
+                            d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+                    </svg>
+                </div>
+            </div>
         </div>
     </nav>
     <!-- /Navbar -->
-<div id="bosluk">
+    <div id="bosluk">
 
-</div>
-
+    </div>
     <!-- icerik -->
     <div class="center">
         <div class="container">
@@ -98,8 +138,7 @@
             <!-- Sayfalama butonları -->
             <div class="row mb-3 rounded-bottom">
                 <div class="col d-flex justify-content-center">
-                    <div class="btn-toolbar mb-3 mt-3" role="toolbar" aria-label="Toolbar with button groups"
-                        id="pagination-buttons">
+                    <div class="btn-toolbar mb-3 mt-3" role="toolbar" id="pagination-buttons">
                         <!-- Pagination buttons will be dynamically generated here -->
                     </div>
                 </div>
@@ -112,20 +151,23 @@
     <!-- Footer -->
     <footer class="footer pt-4">
         <div class="container">
-            <div class="row" style="background-color: #00224D;">
-                <div class="col-md-4">
+            <div class="row" style="background-color:var(--navbar-bg);">
+                <div class="col-md-4 footer-texts">
                     <h5>Filmofy hakkında</h5>
                     <p>Bir TeknoGenç projesidir.</p>
                 </div>
                 <div class="col-md-4">
-                    <h5>Emeği Geçenler</h5>
+                    <h5 class="footer-texts">Emeği Geçenler</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://vsincar.github.io/my-portfolio" target="_blank">Veysel Sincar</a></li>
-                        <li><a href="https://github.com/emir-emir" target="_blank">Emirsah Erden</a></li>
-                        <li><a href="https://github.com/kagdas" target="_blank">Kübra Ağdaş</a></li>
+                        <li><a href="https://vsincar.github.io/my-portfolio" target="_blank" class="footer-texts">Veysel
+                                Sincar</a></li>
+                        <li><a href="https://github.com/emir-emir" target="_blank" class="footer-texts">Emirsah
+                                Erden</a></li>
+                        <li><a href="https://github.com/kagdas" target="_blank" class="footer-texts">Kübra Ağdaş</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 footer-texts">
                     <h5>İletişim için:</h5>
                     <p>Email: info@filmofy.com</p>
                     <div class="social-icons">
@@ -136,8 +178,8 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center py-3">
-                <span>© 2024 Filmofy. Tüm hakları saklıdır.</span>
+            <div class="text-center py-3 footer-texts">
+                <span class="">© 2024 Filmofy. Tüm hakları saklıdır.</span>
             </div>
         </div>
     </footer>
@@ -158,6 +200,8 @@
     <script src="scripts/main.js"></script>
     <!-- Arama fonksiyonu-->
     <script src="scripts/suggestions.js"></script>
+    <!--tema degistiren toggle buton-->
+    <script src="scripts/tema_degisim.js"></script>
 </body>
 
 </html>

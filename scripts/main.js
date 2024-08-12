@@ -1,20 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let films = [];
-    let currentPage = 1; // current page
-    const filmsPerPage = 20; // sayfa basina 20 film
+document.addEventListener("DOMContentLoaded", () => {
+  let films = [];
+  let currentPage = 1; // ilk sayfa
+  const filmsPerPage = 20; // sayfa basina 20 film
 
-    const displayFilms = (filmsToDisplay) => {
-        const filmList = document.querySelector('#film-list');
-        filmList.innerHTML = ''; 
+  const displayFilms = (filmsToDisplay) => {
+    const filmList = document.querySelector("#film-list");
+    filmList.innerHTML = "";
 
-        // Displaying films
-        filmsToDisplay.forEach(film => {
-            const filmCard = document.createElement('div');
-            filmCard.classList.add('film-card');
+    //Filmleri siralama
+    filmsToDisplay.forEach((film) => {
+      const filmCard = document.createElement("div");
+      filmCard.classList.add("film-card");
 
-            const genres = film.genre.split(',').map(genre => `<span class="badge badge-primary genre">${genre.trim()}</span>`).join('');
+      const genres = film.genre
+        .split(",")
+        .map(
+          (genre) =>
+            `<span class="badge badge-primary genre">${genre.trim()}</span>`
+        )
+        .join("");
 
-            filmCard.innerHTML = `
+      filmCard.innerHTML = `
                 <a href="film-detail.html?id=${film.id}">
                     <img src="${film.image}" class="film-card rounded-lg">
                     <div class="film-overlay rounded-lg">
@@ -32,82 +38,84 @@ document.addEventListener('DOMContentLoaded', () => {
                 </a>
             `;
 
-            const heartIcon = filmCard.querySelector('.film-heart');
-            heartIcon.addEventListener('click', (event) => {
-                event.preventDefault();
-                heartIcon.classList.toggle('liked');
-                if (heartIcon.classList.contains('liked')) {
-                    heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
-                } else {
-                    heartIcon.innerHTML = '<i class="far fa-heart"></i>';
-                }
-            });
-
-            const genreElements = filmCard.querySelectorAll('.genre');
-            genreElements.forEach(genre => {
-                genre.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    localStorage.setItem('selectedGenre', genre.textContent.trim());
-                    window.location.href = 'index.html';
-                });
-            });
-
-            filmList.appendChild(filmCard);
-        });
-    };
-
-    const renderPagination = (totalFilms) => {
-        const paginationButtons = document.querySelector('#pagination-buttons');
-        paginationButtons.innerHTML = '';
-
-        const totalPages = Math.ceil(totalFilms / filmsPerPage);
-
-        for (let i = 1; i <= totalPages; i++) {
-            const button = document.createElement('button');
-            button.type = 'button';
-            button.classList.add('btn', 'btn-outline-dark', 'mx-1');
-            button.textContent = i;
-            button.addEventListener('click', () => {
-                currentPage = i;
-                paginateFilms();
-                document.querySelector('#film-list').scrollIntoView({ behavior: 'smooth' });
-            });
-            paginationButtons.appendChild(button);
+      const heartIcon = filmCard.querySelector(".film-heart");
+      heartIcon.addEventListener("click", (event) => {
+        event.preventDefault();
+        heartIcon.classList.toggle("liked");
+        if (heartIcon.classList.contains("liked")) {
+          heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
+        } else {
+          heartIcon.innerHTML = '<i class="far fa-heart"></i>';
         }
-    };
+      });
 
-    const paginateFilms = () => {
-        const startIndex = (currentPage - 1) * filmsPerPage;
-        const endIndex = startIndex + filmsPerPage;
-        const filmsToDisplay = films.slice(startIndex, endIndex);
-        displayFilms(filmsToDisplay);
-    };
+      const genreElements = filmCard.querySelectorAll(".genre");
+      genreElements.forEach((genre) => {
+        genre.addEventListener("click", (event) => {
+          event.preventDefault();
+          localStorage.setItem("selectedGenre", genre.textContent.trim());
+          window.location.href = "index.html";
+        });
+      });
 
-    fetch('database/films.json')
-        .then(response => response.json())
-        .then(data => {
-            films = data;
-            renderPagination(films.length);
-            paginateFilms();
+      filmList.appendChild(filmCard);
+    });
+  };
 
-            const selectedGenre = localStorage.getItem('selectedGenre');
-            if (selectedGenre) {
-                filterFilms(selectedGenre);
-                localStorage.removeItem('selectedGenre');
-            } else {
-                displayFilms(films.slice(0, filmsPerPage));
-            }
-        })
-        .catch(error => console.error('Error fetching films:', error));
+  const renderPagination = (totalFilms) => {
+    const paginationButtons = document.querySelector("#pagination-buttons");
+    paginationButtons.innerHTML = "";
 
-    window.filterFilms = (genre) => {
-        const filteredFilms = films.filter(film => film.genre.includes(genre));
-        renderPagination(filteredFilms.length);
-        displayFilms(filteredFilms.slice(0, filmsPerPage));
-    };
+    const totalPages = Math.ceil(totalFilms / filmsPerPage);
 
-    window.showAllFilms = () => {
-        renderPagination(films.length);
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.classList.add("sayfa-butonlari", "mx-1");
+      button.textContent = i;
+      button.addEventListener("click", () => {
+        currentPage = i;
+        paginateFilms();
+        document
+          .querySelector("#film-list")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+      paginationButtons.appendChild(button);
+    }
+  };
+
+  const paginateFilms = () => {
+    const startIndex = (currentPage - 1) * filmsPerPage;
+    const endIndex = startIndex + filmsPerPage;
+    const filmsToDisplay = films.slice(startIndex, endIndex);
+    displayFilms(filmsToDisplay);
+  };
+
+  fetch("database/films.json")
+    .then((response) => response.json())
+    .then((data) => {
+      films = data;
+      renderPagination(films.length);
+      paginateFilms();
+
+      const selectedGenre = localStorage.getItem("selectedGenre");
+      if (selectedGenre) {
+        filterFilms(selectedGenre);
+        localStorage.removeItem("selectedGenre");
+      } else {
         displayFilms(films.slice(0, filmsPerPage));
-    };
+      }
+    })
+    .catch((error) => console.error("Error fetching films:", error));
+
+  window.filterFilms = (genre) => {
+    const filteredFilms = films.filter((film) => film.genre.includes(genre));
+    renderPagination(filteredFilms.length);
+    displayFilms(filteredFilms.slice(0, filmsPerPage));
+  };
+
+  window.showAllFilms = () => {
+    renderPagination(films.length);
+    displayFilms(films.slice(0, filmsPerPage));
+  };
 });
