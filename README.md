@@ -2,6 +2,7 @@
 **TeknoGenc Project 2024**
 ##### 17/07/2024
 - Added theme switcher toggle button 08/12/2024
+- Search function was added 
 - A movie lover's social media like spotify web site
 - UI and Front End codes working
 
