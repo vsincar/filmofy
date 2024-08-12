@@ -15,8 +15,9 @@ Demo:[Filmofy](https://vsincar.github.io/filmofy/)
 ## Here some screetshots
 ![Filmofy HomePage](home_page.png)
 ![Filmofy Dark Theme](home_page-dark.png)
-![Filmofy Profile Page](profile.png)
+
 ![Filmofy Searching Function](search.png)
+![Filmofy Profile Page](profile_page.png)
 
 
 
