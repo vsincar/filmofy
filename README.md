@@ -9,7 +9,8 @@
 > There is no Back-End coding here. 
 
 
-## Here screetshots
+
+## Here some screetshots
 ![Filmofy HomePage](WebScreen.png)
 ![Filmofy ProfilePage](ProfilePage.png)
 
