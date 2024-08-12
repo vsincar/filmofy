@@ -143,12 +143,14 @@
   text-align: center;
   padding: 20px; /* Örneğin padding değeri eklendi */
   box-sizing: border-box; /* Padding için kutu modelini sınırlı hale getir */
+  transition: var(--default-transition);
 }
 
 .film-overlay-content {
   max-width: 93%; /* İçerik genişliğini ayarla */
   max-height: 99%;
   padding: 5px; /* İçerik için padding değeri eklendi */
+  transition: var(--default-transition);
 }
 
 .film-genres {
@@ -176,6 +178,7 @@
 .film-card img {
   width: 260px;
   height: 420px;
+  transition: var(--default-transition);
 }
 
 .film-title,
