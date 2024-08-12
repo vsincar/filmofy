@@ -8,9 +8,14 @@
 > [!NOTE]  
 > There is no Back-End coding here. 
 
+Demo:[Filmofy](https://vsincar.github.io/filmofy/)
 
 
 ## Here some screetshots
-![Filmofy HomePage](WebScreen.png)
-![Filmofy ProfilePage](ProfilePage.png)
+![Filmofy HomePage](home_page.png)
+![Filmofy Dark Theme](home_page-dark.png)
+![Filmofy Profile Page](home_page-dark.png)
+![Filmofy Searching Function](search.png)
+
+
 
