@@ -4,7 +4,9 @@
 - Added theme switcher toggle button 08/12/2024
 - A movie lover's social media like spotify web site
 - UI and Front End codes working
-  - Note: There is no Back-End coding here. 
+
+  > **Note**
+  > Note: There is no Back-End coding here. 
 
 ## Here screetshots
 ![Filmofy HomePage](WebScreen.png)
