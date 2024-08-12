@@ -6,7 +6,7 @@
 - UI and Front End codes working
 
   > **Note**
-  > Note: There is no Back-End coding here. 
+  > info: There is no Back-End coding here. 
 
 ## Here screetshots
 ![Filmofy HomePage](WebScreen.png)
