@@ -5,8 +5,9 @@
 - A movie lover's social media like spotify web site
 - UI and Front End codes working
 
-  > [!NOTE] 
-  > Note: There is no Back-End coding here. 
+> [!NOTE]  
+> There is no Back-End coding here. 
+
 
 ## Here screetshots
 ![Filmofy HomePage](WebScreen.png)
