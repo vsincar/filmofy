@@ -255,6 +255,12 @@
   text-decoration: underline;
 }
 
+.login-footer {
+  position: absolute;
+  bottom: -30vh;
+  width: 100%;
+}
+
 .social-icons a {
   font-size: 1.5rem;
 }
@@ -341,4 +347,11 @@ a.footer-texts {
 }
 #toggle-button {
   width: 5.1rem;
+}
+
+/*footer login sayfasinda en alta hizalanir */
+@media screen and (max-width: 600px) {
+  .login-footer {
+    bottom: -50vh;
+  }
 }
