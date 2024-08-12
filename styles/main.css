@@ -1,31 +1,35 @@
 :root[data-theme="light"] {
+  /*Genel renkler */
   --page-bg: #5d0e41;
   --navbar-bg: #00224d;
   --white-color: #fff;
   --black-color: #000;
 
   --row-bg: #fff;
-
+  /* film kartlari */
   --film-card-hover-bg: rgba(0, 0, 0, 0.9);
   --film-overlay-text-color: #fff;
   --imdb-bg: #f5c518;
-
-  --search-input-bg: white;
-  --placeholder-color: #aaa;
-
+  --film-title-bg: rgba(0, 0, 0, 0.6);
+  /* buton */
   --badge-primary: #007bff;
 
   --film-heart: #fff;
 
+  /*Carousel icin */
   --carousel-icon-border: var(--row-bg);
   --carousel-icon-shadow: rgba(0, 0, 0, 0.3);
   --carousel-icon-bg: rgba(0, 0, 0, 0.5);
 
-  --box-shadow: rgba(0, 0, 0, 0.3); /*Carousel icin */
+  --box-shadow: rgba(0, 0, 0, 0.3);
   --carousel-bg: rgba(0, 0, 0, 0.5);
 
+  /* Arama bari ve sonuc arkaplani */
   --suggestion-hover: #f0f0f0;
+  --search-input-bg: white;
+  --placeholder-color: #aaa;
 
+  /* Tema degistirme butonu */
   --switch-bg: #f5f5f6;
   --switch-circle-bg: #ffd371;
   --switch-circle-pos: 0.12rem;
@@ -33,34 +37,36 @@
   --icon-moon: #b1b0b5;
 }
 :root[data-theme="dark"] {
+  /*Genel renkler */
   --page-bg: #311023;
   --navbar-bg: #0c1429;
   --white-color: #000;
   --black-color: #fff;
 
   --row-bg: #000;
-
+  /* film kartlari */
   --film-card-hover-bg: rgba(255, 255, 255, 0.9);
   --film-overlay-text-color: #000;
   --imdb-bg: #f5c518;
   --film-title-bg: rgba(255, 255, 255, 0.6);
-
-  --search-input-bg: #2d2c35;
-  --placeholder-color: #f5f5f6;
-
+  /*buton */
   --badge-primary: #1f3d77;
 
   --film-heart: #000;
-
+  /*Carousel icin */
   --carousel-icon-border: var(--row-bg);
   --carousel-icon-shadow: rgba(255, 255, 255, 0.3);
   --carousel-icon-bg: rgba(114, 114, 114, 0.5);
 
-  --box-shadow: rgba(0, 0, 0, 0.3); /*Carousel icin */
+  --box-shadow: rgba(0, 0, 0, 0.3);
   --carousel-bg: rgba(0, 0, 0, 0.5);
 
+  /* Arama bari ve sonuc arkaplani */
   --suggestion-hover: #f0f0f0;
+  --search-input-bg: #2d2c35;
+  --placeholder-color: #f5f5f6;
 
+  /* Tem degistirme butonu */
   --switch-bg: #2d2c35;
   --switch-circle-bg: #7190ff;
   --switch-circle-pos: 2.66rem;
@@ -120,7 +126,7 @@
   position: relative;
   margin: 5px 3px;
   overflow: hidden;
-  cursor: pointer; /* Tıklanabilir olduğunu gösterir */
+  cursor: pointer; /* Mouse imlecini tiklanabilir hale donusturur */
 }
 
 .film-card:hover .film-overlay {
