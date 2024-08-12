@@ -1,4 +1,4 @@
-// favfilm.js
+// favfilm profilim sayfasinda carousel itemleri sergilemeye yarayan js kodu
 document.addEventListener("DOMContentLoaded", function () {
   fetch("database/films.json")
     .then((response) => response.json())
@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       let carouselItems = "";
 
-      // Generate carousel items
+      // Carousel itemleri burada olusturuluyor
       data.forEach((film, index) => {
-        // Check if the index is divisible by 5 to start a new carousel item
+        // 5 tane item olup olmadigini kontrol ediyoruz
         if (index % 5 === 0) {
           if (index > 0) {
-            carouselItems += "</div>"; // Close previous carousel item
+            carouselItems += "</div>"; // onceki carousel itemi burda kapaniyor
           }
           carouselItems +=
             '<div class="carousel-item' +
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             '"><div class="row" style="background-color:white">';
         }
 
-        // Add film card
+        // Film kartlari ekleme
         carouselItems += `
                     <div class="col">
                         <div class="card">
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 `;
 
-        // Close the last carousel item
+        // Son carousel itemi kapaniyor burada toplamda 5 item gorunmesini sagliyor
         if (index === data.length - 1 || (index + 1) % 5 === 0) {
           carouselItems += "</div></div>";
         }
       });
 
-      // Inject carousel items into carousel inner
+      // Carousel kartlarini cagiriyoruz
       carouselInner.innerHTML = carouselItems;
     })
     .catch((error) => console.error("Error fetching the films data:", error));

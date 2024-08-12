@@ -1,3 +1,5 @@
+//filmlere tiklandiginda acilacak olan film-detail.html sayfasinda ilgili filmin id'si ile
+//filme dair detayli bilgiler olusturan js kodu
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const filmId = urlParams.get("id");

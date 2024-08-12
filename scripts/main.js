@@ -1,3 +1,5 @@
+//bu js kodunda, ana sayfada filmleri database/films.json
+//dosyasindan cagirir ve sayfali sekilde 20li filmler sergiler
 document.addEventListener("DOMContentLoaded", () => {
   let films = [];
   let currentPage = 1; // ilk sayfa

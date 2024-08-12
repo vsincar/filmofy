@@ -1,4 +1,4 @@
-//switch funtion begins
+//Tema degistirme butonu js kodu
 const switchTheme = () => {
   // Get root element and the data-theme value
   const rootElem = document.documentElement;
