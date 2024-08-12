@@ -127,17 +127,19 @@
 
     <div class="center">
         <div class="container rounded" style="background-color: #FFF;">
-            <form id="login-form" action="#" method="post" class="needs-validation mb-4 mt-4 p-4" novalidate>
+            <form id="login-form" action="login.html" method="post" class="needs-validation mb-4 mt-4 p-4" novalidate>
                 <div class="form-group">
                     <label for="uname">Kullanıcı adı:</label>
-                    <input type="text" class="form-control" id="uname" placeholder="Kullanıcı adınızı giriniz."
-                        name="uname" required>
+                    <input type="text" class="form-control input-alanlari"
+                        style="background-color:var(--search-input-bg);" id="uname"
+                        placeholder="Kullanıcı adınızı giriniz." name="uname" required>
                     <div class="valid-feedback">Geçerli.</div>
                     <div class="invalid-feedback">Lütfen bu alanı doldurun.</div>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Şifre:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Şifre giriniz." name="pswd"
+                    <input type="password" class="form-control" id="pwd"
+                        style="background-color:var(--search-input-bg);" placeholder="Şifre giriniz." name="pswd"
                         required>
                     <div class="valid-feedback">Geçerli.</div>
                     <div class="invalid-feedback">Lütfen bu alanı doldurun.</div>
@@ -176,25 +178,27 @@
                 <div class="form-group">
                     <label for="signup_username">Kullanıcı adı:</label>
                     <input type="text" class="form-control" id="signup_username"
-                        placeholder="Kullanıcı adınızı giriniz." name="signup_uname" required>
+                        placeholder="Kullanıcı adınızı giriniz." name="signup_uname"
+                        style="background-color:var(--search-input-bg);" required>
                     <div class="invalid-feedback">Lütfen bu alanı doldurun.</div>
                 </div>
                 <div class="form-group">
                     <label for="signup_email">Email:</label>
                     <input type="email" class="form-control" id="signup_email" placeholder="E-mail adresi giriniz."
-                        name="signup_email" required>
+                        name="signup_email" style="background-color:var(--search-input-bg);" required>
                     <div class="invalid-feedback">Lütfen geçerli bir email adresi giriniz.</div>
                 </div>
                 <div class="form-group">
                     <label for="signup_pwd">Şifre:</label>
                     <input type="password" class="form-control" id="signup_pwd" placeholder="Şifre yazınız."
-                        name="signup_pswd" required>
+                        name="signup_pswd" style="background-color:var(--search-input-bg);" required>
                     <div class="invalid-feedback">Lütfen bu alanı doldurun.</div>
                 </div>
                 <div class="form-group">
                     <label for="signup_pwd_confirm">Şifre Tekrar:</label>
                     <input type="password" class="form-control" id="signup_pwd_confirm"
-                        placeholder="Şifreyi tekrar yazınız." name="signup_pswd_confirm" required>
+                        placeholder="Şifreyi tekrar yazınız." name="signup_pswd_confirm"
+                        style="background-color:var(--search-input-bg);" required>
                     <div class="invalid-feedback">Lütfen bu alanı doldurun.</div>
                 </div>
                 <button type="submit" style="background-color: var(--badge-primary);" class="btn btn-primary">Kayıt
