@@ -1,4 +1,4 @@
-# filmofy
+# Filmofy
 **TeknoGenc Project 2024**
 ##### 17/07/2024
 - Added theme switcher toggle button 08/12/2024
